@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>ChatGPTアプリ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 600px;
+            text-align: center;
+            box-sizing: border-box; /* これを追加してパディングを含む全体の幅を指定 */
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        textarea {
+            width: calc(100% - 22px); /* パディングの分を引いた幅を設定 */
+            height: 100px;
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            resize: none;
+            font-size: 16px;
+            margin-bottom: 20px;
+            box-sizing: border-box; /* これを追加してパディングを含む全体の幅を指定 */
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ChatGPTアプリ</h1>
+        <p>ChatGPTに質問できるアプリです。</p>
+        <form action="/query" method="post">
+            <label for="prompt_text">プロンプトを入力してください:</label><br>
+            <textarea id="prompt_text" name="prompt_text" placeholder="プロンプトを入力してください"></textarea><br>
+            <input type="submit" value="送信">
+        </form>
+    </div>
+</body>
+</html>
