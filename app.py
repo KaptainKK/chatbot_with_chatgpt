@@ -3,8 +3,8 @@ import requests
 
 app = Flask(__name__)
 
-# APIトークンは外部に公開しないこと
-API_KEY = "YOUR_API_KEY"
+# APIキー
+API_KEY = "OPENAI_API_KEY"
 
 
 # チャットGPTに質問する関数
