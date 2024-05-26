@@ -1,11 +1,13 @@
 from flask import Flask, request, render_template
 import requests
+import os
 
 app = Flask(__name__)
 
 # APIキー
-API_KEY = "OPENAI_API_KEY"
-
+API_KEY = os.getenv("OPENAI_API_KEY")  # 環境変数からAPIキーを取得
+if not API_KEY:
+    raise ValueError("APIキーが設定されていません。環境変数 'OPENAI_API_KEY' を設定してください。")
 
 # チャットGPTに質問する関数
 def query_chatgpt(prompt):
